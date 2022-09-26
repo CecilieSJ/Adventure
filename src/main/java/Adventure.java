@@ -38,5 +38,14 @@ public class Adventure {
         }
     }
 
+    public boolean goEast() {
+        if (currentRoom.getEast() == null){
+            return false;
+        }else {
+            currentRoom = currentRoom.getEast();
+            return true;
+        }
+    }
+
 
 }
