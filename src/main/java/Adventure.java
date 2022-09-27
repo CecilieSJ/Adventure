@@ -7,13 +7,23 @@ public class Adventure {
         Room room1 = new Room("Cabin", "Something startle");
         Room room2 = new Room("forest", "It has become dark. The thin air feels like a knife cutting through your skin." +
                 "You have been walking around for hours but it is like the darkness has swallowed you. ");
-        Room room3 = new Room("room3", "eeeeg");
+        Room gateToVillage = new Room("Gate to village", "You keep moving forward though the dark forest " +
+                "and after what feels like forever you finally arrive to a clearing. " +
+                "Where their is a gate but if you look closer to it, you can see that the gate has a lock on it, which requires a key");
         Room room4 = new Room("room4", "uuggg");
         Room room5 = new Room("room5", "ghhhgg");
-        Room room6 = new Room("room6", "ggg");
+        Room theVillage = new Room("The village", "You open the gate, walks in. But the moment you do so," +
+                "the gate closes shut behind you and you are now unable to go back to your cabin from that way" +
+                "As the key only works one way and you would have to find another way pass the gate." +
+                " You look away from the gate and you can see what seems to be an abandoned village, however you have a feel that it might not be the case");
         Room room7 = new Room("room7", "jjj");
         Room room8 = new Room("room8", "fff");
-        Room room9 = new Room("room9", "kkk");
+        Room theHouse = new Room("The House", "You walk over to one of the houses, which to your surprise is'nt locked"+
+                "you enter the house and you discover that the house only has one big room, which looks old and abandoned" +
+                "the only sign of anyone that used to live there," +
+                "is an old bed and some shelves with some books and some stuff on a bedside table"+
+                "Where you find a note that states 'go to the lake and you will find what you seek'" + "You then exit the house and you can see a lake to the west from you"+
+                "and the way that you came from.");
 
 
         room1.setNorth(null);
@@ -22,14 +32,14 @@ public class Adventure {
         room1.setSouth(room4);
 
         room2.setNorth(null);
-        room2.setEast(room3);
+        room2.setEast(gateToVillage);
         room2.setWest(room1);
         room2.setSouth(null);
 
-        room3.setNorth(null);
-        room3.setEast(null);
-        room3.setWest(room2);
-        room3.setSouth(room6);
+        gateToVillage.setNorth(null);
+        gateToVillage.setEast(null);
+        gateToVillage.setWest(room2);
+        gateToVillage.setSouth(theVillage);
 
         room4.setNorth(room1);
         room4.setEast(null);
@@ -41,10 +51,10 @@ public class Adventure {
         room5.setWest(null);
         room5.setSouth(room8);
 
-        room6.setNorth(room3);
-        room6.setEast(null);
-        room6.setWest(null);
-        room6.setSouth(room9);
+        theVillage.setNorth(gateToVillage);
+        theVillage.setEast(null);
+        theVillage.setWest(null);
+        theVillage.setSouth(theHouse);
 
         room7.setNorth(room4);
         room7.setEast(room8);
@@ -53,13 +63,13 @@ public class Adventure {
 
         room8.setNorth(room5);
         room8.setWest(room7);
-        room8.setEast(room9);
+        room8.setEast(theHouse);
         room8.setSouth(null);
 
-        room9.setNorth(room6);
-        room9.setWest(room8);
-        room9.setEast(null);
-        room9.setSouth(null);
+        theHouse.setNorth(theVillage);
+        theHouse.setWest(room8);
+        theHouse.setEast(null);
+        theHouse.setSouth(null);
 
         currentRoom = room1;
     }

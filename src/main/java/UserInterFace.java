@@ -13,7 +13,7 @@ public class UserInterFace {
                 case "Go north", "North", "n":
 
                     boolean goingNorth = adventure.goNorth();
-                    System.out.println("going north " + goingNorth);
+                    System.out.println("going north " + goingNorth );
 
                     break;
 
