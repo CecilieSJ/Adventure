@@ -74,6 +74,11 @@ public class Adventure {
         currentRoom = room1;
     }
 
+
+    public Room getCurrentRoom() {
+        return currentRoom;
+    }
+
     public boolean goNorth() {
         if (currentRoom.getNorth() == null) {
             return false;

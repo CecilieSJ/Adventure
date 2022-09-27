@@ -4,9 +4,11 @@ public class UserInterFace {
     Scanner scan = new Scanner(System.in);
     Adventure adventure = new Adventure();
 
+
     public void startMenu() {
         boolean isRunning = true;
         while (isRunning) {
+            System.out.println("You are now in " + adventure.getCurrentRoom());
             String direction = scan.nextLine();
             switch (direction) {
 
@@ -24,11 +26,13 @@ public class UserInterFace {
                     break;
 
                 case "Go east", "east", "e":
-                    System.out.println("going e");
+                    boolean goingEast = adventure.goEast();
+                    System.out.println("going e" + goingEast);
                     break;
 
                 case " Go west", "west", "w":
-                    System.out.println("going w");
+                    boolean goingWest = adventure.goWest();
+                    System.out.println("going w " + goingWest);
                     break;
 
                 case "exit", "ex":
